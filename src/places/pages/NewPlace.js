@@ -1,7 +1,7 @@
-export default function NewPlace() {
-  return (
-    <div>
-        <h1>New Place Page</h1>
-    </div>
-  );
-}
+import React from 'react';
+
+const NewPlace = () => {
+  return <h2>NewPlace Works!</h2>
+};
+
+export default NewPlace;

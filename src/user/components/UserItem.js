@@ -1,15 +1,25 @@
-import "./UserItem.css"
+import "./UserItem.css";
 
-const UserItem =(props) => {
+const UserItem = ({ id, image, name, placeCount }) => {
   return (
-    <ul>
-      {props.items.map(user => (
-        <li key={user.id}>
-          {user.name} ({user.placeCount} places)
-        </li>
-      ))}
-    </ul>
+    <li className="user-item">
+      <div className="user-item__content">
+        <div className="user-item__image">
+          <img src={image} alt={name} />
+        </div>
+        <div className="user-item__info">
+          <h2>{name}</h2>
+          <h3>
+            {placeCount} {placeCount === 1 ? "Place" : "Places"}
+          </h3>
+        </div>
+        {/* <div className="user-item__actions">
+          <button>View Places</button>
+          <button>Send Message</button>
+        </div> */}
+      </div>
+    </li>
   );
-}
+};
 
 export default UserItem;
